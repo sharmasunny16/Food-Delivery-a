@@ -1,0 +1,122 @@
+.place-order {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+  padding: 40px 8vw;
+  margin-top: 40px;
+}
+
+/* ---------- Left Section ---------- */
+.place-order-left {
+  width: 55%;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: fadeIn 0.6s ease;
+}
+
+.place-order-left .title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.place-order-left input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.place-order-left input:focus {
+  border-color: #ff4a4a;
+  box-shadow: 0 0 5px rgba(255, 74, 74, 0.3);
+}
+
+.multi-fields {
+  display: flex;
+  gap: 15px;
+}
+
+/* ---------- Right Section ---------- */
+.place-order-right {
+  width: 40%;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease;
+}
+
+.cart-total h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #333;
+}
+
+.cart-total-detalis {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.place-order-right hr {
+  border: none;
+  height: 1px;
+  background: #e6e6e6;
+  margin: 12px 0;
+}
+
+.place-order-right button {
+  width: 100%;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(45deg, #ff4a4a, #ff0000);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.place-order-right button:hover {
+  opacity: 0.9;
+}
+
+/* ---------- Responsiveness ---------- */
+@media (max-width: 900px) {
+  .place-order {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .place-order-left,
+  .place-order-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .multi-fields {
+    flex-direction: column;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

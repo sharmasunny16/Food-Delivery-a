@@ -1,0 +1,58 @@
+/* Sidebar Container */
+.sidebar {
+    width: 18%;
+    min-height: 100vh;
+    background: #ffffff;
+    border-right: 1.5px solid #d3d3d3;
+    font-size: clamp(10px, 1vw, 15px);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+}
+
+/* Sidebar Options Wrapper */
+.sidebar-options {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 35px;
+    padding-left: 12%;
+}
+
+/* Sidebar Option Item */
+.sidebar-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #444;
+    transition: 0.25s ease;
+}
+
+/* Hover/Active Effects */
+.sidebar-option:hover,
+.sidebar-option.active {
+    background: #ff4d30;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(255, 77, 48, 0.35);
+    transform: translateX(4px);
+}
+
+/* Icons Inside Sidebar */
+.sidebar-option img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* --------------------------------------
+   RESPONSIVE (TABLET & MOBILE)
+--------------------------------------- */
+@media (max-width: 900px) {
+    .sidebar-option p{
+        display: none;
+    }
+}

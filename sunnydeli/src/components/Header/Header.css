@@ -1,0 +1,128 @@
+
+.header {
+  height: 32vw;
+  margin: 30px auto;
+  background: url('/header_img.png') center/cover no-repeat;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft Gradient for better readability */
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.15)
+  );
+}
+
+/* Content */
+.header-content {
+  position: absolute;
+  bottom: 12%;
+  left: 5%;
+  max-width: 45%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+/* Title - Simple and Bold like Swiggy */
+.header-content h2 {
+  font-size: clamp(26px, 4vw, 58px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* Description */
+.header-content p {
+  font-size: clamp(14px, 1.2vw, 20px);
+  opacity: 0.9;
+}
+
+/* Button */
+.header-content button {
+  padding: 12px 30px;
+  font-size: clamp(14px, 1.2vw, 18px);
+  border-radius: 30px;
+  border: none;
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.35s ease;
+  box-shadow: 0 6px 15px rgba(255, 99, 71, 0.35);
+}
+
+.header-content button:hover {
+  background-color: #ff6a4d;
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 1024px) {
+  .header {
+    height: 45vw; 
+  }
+
+  .header-content {
+    max-width: 55%;
+    bottom: 10%;
+    left: 5%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .header {
+    height: 60vw;
+    border-radius: 14px;
+  }
+  .header-content p {
+    display: none;
+  }
+
+  .header-content {
+    max-width: 70%;
+    bottom: 12%;
+  }
+
+  .header-content button {
+    padding: 10px 24px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .header {
+    height: 75vw;
+    margin: 20px auto;
+    border-radius: 12px;
+  }
+
+  .header-content {
+    max-width: 85%;
+    left: 4%;
+    bottom: 10%;
+    gap: 10px;
+  }
+
+  .header-content h2 {
+    font-size: 22px; 
+  }
+
+  .header-content p {
+    display: none;
+  }
+
+  .header-content button {
+    font-size: 13px;
+    padding: 8px 20px;
+  }
+}

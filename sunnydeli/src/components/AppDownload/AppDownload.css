@@ -1,0 +1,46 @@
+/* Section */
+.app-download {
+    margin: auto auto;
+    margin-top: 100px;
+    font-size: max(3vw, 20px);
+    text-align: center;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeSlideUp 0.8s ease forwards;
+}
+
+/* Platform Buttons */
+.app-download-platform {
+    display: flex;
+    justify-content: center;
+    gap: max(2vw, 12px);
+    margin-top: 40px;
+    opacity: 0;
+    animation: fadeSlideUp 1s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.app-download-platform img {
+    width: max(30vw, 120px);
+    max-width: 190px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+/* Hover Animation */
+.app-download-platform img:hover {
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+}
+
+/* Keyframes */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
